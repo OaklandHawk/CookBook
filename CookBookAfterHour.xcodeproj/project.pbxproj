@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		F5DF85AF2331AE4E00F6B355 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DF85AE2331AE4E00F6B355 /* AppDelegate.swift */; };
-		F5DF85B12331AE4E00F6B355 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DF85B02331AE4E00F6B355 /* ViewController.swift */; };
 		F5DF85B42331AE4E00F6B355 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5DF85B22331AE4E00F6B355 /* Main.storyboard */; };
 		F5DF85B62331AE4F00F6B355 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5DF85B52331AE4F00F6B355 /* Assets.xcassets */; };
 		F5DF85B92331AE4F00F6B355 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5DF85B72331AE4F00F6B355 /* LaunchScreen.storyboard */; };
+		F5DF85C12331B18200F6B355 /* RecipesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DF85C02331B18200F6B355 /* RecipesTableViewController.swift */; };
+		F5DF85C32331B19900F6B355 /* AddRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DF85C22331B19900F6B355 /* AddRecipeViewController.swift */; };
+		F5DF85C92331B2A900F6B355 /* Cookbook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F5DF85C72331B2A900F6B355 /* Cookbook.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F5DF85AB2331AE4E00F6B355 /* CookBookAfterHour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookBookAfterHour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5DF85AE2331AE4E00F6B355 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F5DF85B02331AE4E00F6B355 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F5DF85B32331AE4E00F6B355 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F5DF85B52331AE4F00F6B355 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5DF85B82331AE4F00F6B355 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5DF85BA2331AE4F00F6B355 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5DF85C02331B18200F6B355 /* RecipesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesTableViewController.swift; sourceTree = "<group>"; };
+		F5DF85C22331B19900F6B355 /* AddRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeViewController.swift; sourceTree = "<group>"; };
+		F5DF85C82331B2A900F6B355 /* Cookbook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cookbook.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +42,7 @@
 		F5DF85A22331AE4E00F6B355 = {
 			isa = PBXGroup;
 			children = (
+				F5DF85C72331B2A900F6B355 /* Cookbook.xcdatamodeld */,
 				F5DF85AD2331AE4E00F6B355 /* CookBookAfterHour */,
 				F5DF85AC2331AE4E00F6B355 /* Products */,
 			);
@@ -54,14 +59,39 @@
 		F5DF85AD2331AE4E00F6B355 /* CookBookAfterHour */ = {
 			isa = PBXGroup;
 			children = (
-				F5DF85AE2331AE4E00F6B355 /* AppDelegate.swift */,
-				F5DF85B02331AE4E00F6B355 /* ViewController.swift */,
-				F5DF85B22331AE4E00F6B355 /* Main.storyboard */,
-				F5DF85B52331AE4F00F6B355 /* Assets.xcassets */,
-				F5DF85B72331AE4F00F6B355 /* LaunchScreen.storyboard */,
-				F5DF85BA2331AE4F00F6B355 /* Info.plist */,
+				F5DF85C62331B22C00F6B355 /* Resources */,
+				F5DF85C42331B1DF00F6B355 /* View Controllers */,
+				F5DF85C52331B21300F6B355 /* Storyboards */,
 			);
 			path = CookBookAfterHour;
+			sourceTree = "<group>";
+		};
+		F5DF85C42331B1DF00F6B355 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F5DF85C02331B18200F6B355 /* RecipesTableViewController.swift */,
+				F5DF85C22331B19900F6B355 /* AddRecipeViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		F5DF85C52331B21300F6B355 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F5DF85B22331AE4E00F6B355 /* Main.storyboard */,
+				F5DF85B72331AE4F00F6B355 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F5DF85C62331B22C00F6B355 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F5DF85AE2331AE4E00F6B355 /* AppDelegate.swift */,
+				F5DF85B52331AE4F00F6B355 /* Assets.xcassets */,
+				F5DF85BA2331AE4F00F6B355 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +165,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5DF85B12331AE4E00F6B355 /* ViewController.swift in Sources */,
+				F5DF85C92331B2A900F6B355 /* Cookbook.xcdatamodeld in Sources */,
+				F5DF85C32331B19900F6B355 /* AddRecipeViewController.swift in Sources */,
+				F5DF85C12331B18200F6B355 /* RecipesTableViewController.swift in Sources */,
 				F5DF85AF2331AE4E00F6B355 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,7 +316,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FP8VA6LL76;
-				INFOPLIST_FILE = CookBookAfterHour/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CookBookAfterHour/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +334,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FP8VA6LL76;
-				INFOPLIST_FILE = CookBookAfterHour/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CookBookAfterHour/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -336,6 +368,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F5DF85C72331B2A900F6B355 /* Cookbook.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F5DF85C82331B2A900F6B355 /* Cookbook.xcdatamodel */,
+			);
+			currentVersion = F5DF85C82331B2A900F6B355 /* Cookbook.xcdatamodel */;
+			path = Cookbook.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F5DF85A32331AE4E00F6B355 /* Project object */;
 }
