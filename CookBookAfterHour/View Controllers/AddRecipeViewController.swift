@@ -10,21 +10,39 @@ import UIKit
 
 class AddRecipeViewController: UIViewController {
 
-    override func viewDidLoad() {
+	// MARK: - Properties & Outlets
+	
+	@IBOutlet weak var titleTextView: UITextField!
+	@IBOutlet weak var pickerView: UIPickerView!
+	@IBOutlet weak var directionsTextView: UITextView!
+	
+	var pickerData: [String] = []
+	
+	// MARK: - Methods
+	
+	override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+		pickerData = ["Thai", "Italian", "Mexican", "Japanese", "Chinese", "American", "Greek"]
+		pickerView.dataSource = self
+		pickerView.delegate = self
     }
     
+	@IBAction func save(_ sender: Any) {
+		navigationController?.popViewController(animated: true)
+	}
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+extension AddRecipeViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+	
+	func numberOfComponents(in pickerView: UIPickerView) -> Int {
+		return 1
+	}
+	
+	func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+		return pickerData.count
+	}
+	
+	func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+		return pickerData[row]
+	}
 }
