@@ -16,6 +16,7 @@
 		F5DF85C92331B2A900F6B355 /* Cookbook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F5DF85C72331B2A900F6B355 /* Cookbook.xcdatamodeld */; };
 		F5DF85CB2331B3CC00F6B355 /* Recipe+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DF85CA2331B3CC00F6B355 /* Recipe+Convenience.swift */; };
 		F5DF85CD2331B4C300F6B355 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DF85CC2331B4C300F6B355 /* CoreDataStack.swift */; };
+		F5DF85D12331B66700F6B355 /* RecipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DF85D02331B66700F6B355 /* RecipeController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		F5DF85C82331B2A900F6B355 /* Cookbook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cookbook.xcdatamodel; sourceTree = "<group>"; };
 		F5DF85CA2331B3CC00F6B355 /* Recipe+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+Convenience.swift"; sourceTree = "<group>"; };
 		F5DF85CC2331B4C300F6B355 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		F5DF85D02331B66700F6B355 /* RecipeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		F5DF85AD2331AE4E00F6B355 /* CookBookAfterHour */ = {
 			isa = PBXGroup;
 			children = (
+				F5DF85D22331B66E00F6B355 /* Model Controller */,
 				F5DF85CE2331B55100F6B355 /* Model */,
 				F5DF85C62331B22C00F6B355 /* Resources */,
 				F5DF85C42331B1DF00F6B355 /* View Controllers */,
@@ -114,6 +117,14 @@
 				F5DF85C72331B2A900F6B355 /* Cookbook.xcdatamodeld */,
 			);
 			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		F5DF85D22331B66E00F6B355 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F5DF85D02331B66700F6B355 /* RecipeController.swift */,
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +200,7 @@
 			files = (
 				F5DF85CB2331B3CC00F6B355 /* Recipe+Convenience.swift in Sources */,
 				F5DF85C92331B2A900F6B355 /* Cookbook.xcdatamodeld in Sources */,
+				F5DF85D12331B66700F6B355 /* RecipeController.swift in Sources */,
 				F5DF85C32331B19900F6B355 /* AddRecipeViewController.swift in Sources */,
 				F5DF85CD2331B4C300F6B355 /* CoreDataStack.swift in Sources */,
 				F5DF85C12331B18200F6B355 /* RecipesTableViewController.swift in Sources */,

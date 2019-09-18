@@ -9,26 +9,34 @@
 import Foundation
 import CoreData
 
-
 class CoreDataStack {
-	
 	static let shared = CoreDataStack()
-	
-	lazy var container: NSPersistentContainer = {
-		// Give the container the name of your data model file
-		let container = NSPersistentContainer(name: "Recipe")
+	private init() {
 		
+	}
+	lazy var container: NSPersistentContainer = {
+		let container = NSPersistentContainer(name: "Cookbook")
 		container.loadPersistentStores(completionHandler: { (_, error) in
 			if let error = error {
-				fatalError("Failed to load persistent stores: \(error)")
+				fatalError("Error loading data from persistent stores: \(error)")
 			}
 		})
-		
 		return container
 	}()
-	
-	// This should help you remember to use the viewContext on the main thread only
 	var mainContext: NSManagedObjectContext {
 		return container.viewContext
 	}
+	
+	func saveToPersistentStore() {
+		do {
+			try mainContext.save()
+		} catch {
+			NSLog("Error saving context: \(error)")
+			mainContext.reset()
+		}
+	}
 }
+
+
+
+
